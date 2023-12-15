@@ -1,0 +1,47 @@
+---
+import { getImages } from "../lib/getImages";
+
+const images = await getImages();
+---
+
+<div class="flex flex-col">
+	<div class="columns-2 md:columns-3 rounded-3xl overflow-hidden">
+		{
+			images.map(({ src, name }) => (
+				<img
+					class="w-full cursor-pointer mb-4"
+					loading="lazy"
+					decoding="async"
+					src={src}
+					alt={name}
+				/>
+			))
+		}
+	</div>
+	<div class="mx-auto my-10">
+		<button
+			class="flex gap-2 bg-lumna-400 text-lumna-950 border-lumna-600 px-4 py-2 rounded-xl
+            hover:scale-105 hover:shadow-lumna-500 transition-all"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="icon icon-tabler icon-tabler-photo-down"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				stroke-width="2"
+				stroke="currentColor"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+					d="M15 8h.01"></path><path
+					d="M12.5 21h-6.5a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v6.5"
+				></path><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l4 4"
+				></path><path d="M14 14l1 -1c.653 -.629 1.413 -.815 2.13 -.559"
+				></path><path d="M19 16v6"></path><path d="M22 19l-3 3l-3 -3"
+				></path></svg
+			> expandir</button
+		>
+	</div>
+</div>

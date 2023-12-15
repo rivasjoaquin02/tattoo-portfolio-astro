@@ -1,0 +1,68 @@
+---
+import ContactButton from "./ContactButton.astro";
+---
+
+<header class="max-w-screen-xl mx-auto mb-36">
+	<div
+		class="flex flex-col gap-4 justify-around items-center md:flex-row mx-auto pt-20 px-10"
+	>
+		<div class="flex flex-col order-2 md:order-1 text-center md:text-start">
+			<h1
+				id="studio-name"
+				class="text-6xl lg:text-7xl font-bold text-lumna-600 z-10 mb-4"
+			>
+				Cörvus Studio
+			</h1>
+			<p class="text-white/50 text-xl mb-10">
+				Hazte el tatuaje que mereces, no esperes mas!
+			</p>
+			<div>
+				<ContactButton />
+			</div>
+		</div>
+		<img
+			decoding="async"
+			class="max-w-sm md:max-w-sm lg:max-w-lg z-10 order-1 md:order-2"
+			src="/logo.svg"
+			alt="Logo de Corvus Studio"
+		/>
+	</div>
+
+	<!-- <img
+		class="mx-auto animate-bounce"
+		alt="icon"
+		width={40}
+		height={40}
+		src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEHUlEQVR4nO2W609bZRzHn/ja+U6zRI3x3zAsMaEXrikMCy+MJkZ9YYzXxRfKojVmi2Eum1DTsoHYlelG3IRNpAi2hQ56o5fT0+s57enl9PRCgZU5X2ygP/OcFnPWVdkbWp7ET/JJmjxvvt+nz+/XIvQ/9eGKZSVX2M5yhW2eK9xRIdLgine4z77SgeasHhK52ztcvtyPSOGnX6zd0cz6Lg7/+VkdJPJliAtbO2x2k4wSpiWXsGBbwzdfCZ+7DaywBWx2k4wSZrufn7M4YPGWB998JbywBUx2E2L8xm4kU3oZHWbMDkpldlA7JmulBJvdFMNXC0A0U/ozmi79Ec2sb0XS675wuvhFMFk8ig4TFgf1ktlO3d8rwfAbYvhqAdFIel00nCpCMJkv01x+AB22EqYl5308D9FqeIrN/uWmudORSOkIw2w8EUoVWoNcYTbI5YFO5CAQFxwBlh/yx/jjvljm6WZ3eMz44/R7oWRBDO8OcWBxUNhd82rggTmgE7nBQFyAAJsFiuHBz/CwaPfD3JLbe+ApxyavrYxfvg616ieuwI1fl8Xwq/7YQ+fjNd7yhP4J74tlYHHVB7NWp+fAC4xcNNq0Y0ao9czwKNipmPjeL1+ffehcW+PktZ/F8N5oZt4fTT2PGkmyuK3B4s9mB8XgpzIzvwwhrlAZ2EjpiPRMqtlBMfjMy+SexDfvYrPPNjR8bQHMGx+chFfeOgEUkxU3TbBYfFx6JhVVwQW80TR4Qtxzh6LAq29/JA6iuC6T+Rf3K+ALpxWeSArcYW7OQTHPNL3Aa+9+DN8YpsQ9H0oWbuxXYC2SXFgLJ8Vt5Q4mwLTshpu/rXqbVuD19wfhzQ8HAYeq7Hnhk38r4ImkTkrDu+g4mJZcMLOw4ml4Aemgzi+7RMUdHxdgLczdtXnCYHUGRG2eEDjp+N298C46bncG2CEXHTu+6osd7A+Z3nD1tN4wdW/00hT8l8MXLoHh6gx4QskH9rwXD2wkJX5DriBXdtFsY/9K6Ca+//3Ep1+CbuKHfR2+YIDzuu9g6uYCWF0BfOvgpFkw2/1wZcYEfn/8KdRoRsYnT2nHjPe045PwKI6MGeGc/ls4o70IQ8OjMPS1Xvx8TjdhQ81m2mQFLCIVS3VoEalYSC8wTeoT6u/vXxkYGIAamz+Uj4parYZ6IlJQq9UtfX19UOMLiBRUKtWx3t5ekNrT09OCSEGlUkE9ESl0d3dDPREpdHV1tXR2doLUjo4OcmZAqVQea29vB6ltbW3kzIBSqYR6IlJQKBRQT0QKMpmsRS6Xg1SFQkHWDMhrCuBSiBTkNeH3RKQgJ72ATCbj6zyhDCIFuVzeLi2Bw7e2trYh0qATeQ0WkQqdEDRYRCo06QUoVtBgEalQLK/BIlLxxzLvYJudA5HG31l/iYK9OcoRAAAAAElFTkSuQmCC"
+	/> -->
+</header>
+
+<style>
+	@font-face {
+		font-family: "Unifraktur Maguntia";
+		src: url("/fonts/UnifrakturMaguntia-Regular.ttf");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	#studio-name {
+		font-family: "Unifraktur Maguntia", sans-serif;
+	}
+
+	main {
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	.text-gradient {
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
