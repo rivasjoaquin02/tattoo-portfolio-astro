@@ -1,4 +1,5 @@
 ---
+import { LUMNA_PICTURE, SEPARATOR, DESCRIPTION } from "../constants";
 import SectionTitle from "./SectionTitle.astro";
 ---
 
@@ -8,13 +9,13 @@ import SectionTitle from "./SectionTitle.astro";
 			id="imagen"
 			class="w-full mix-blend-exclusion brightness-50"
 			decoding="async"
-			src="person.png"
+			src={LUMNA_PICTURE}
 			alt="Imagen de Lumna"
 		/>
 		<img
 			alt="separator"
 			decoding="async"
-			src="separator.svg"
+			src={SEPARATOR}
 			class="absolute rotate-90 -translate-x-64 translate-y-[37%] md:translate-x-2 md:translate-y-0 md:rotate-0 bottom-0 right-0 h-full"
 		/>
 	</div>
@@ -24,32 +25,7 @@ import SectionTitle from "./SectionTitle.astro";
 		</SectionTitle>
 
 		<p class="text-white/50 text-xl">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia
-			repudiandae vero, saepe nulla perspiciatis architecto, esse officiis
-			laboriosam veritatis expedita repellendus veniam aperiam, fugit
-			autem nisi labore culpa quis!
+			{DESCRIPTION}
 		</p>
 	</div>
 </section>
-
-<style>
-	#imagen {
-		position: relative;
-		display: inline-block;
-	}
-
-	#imagen::after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(
-			to bottom,
-			rgba(255, 255, 255, 1) 0%,
-			rgba(255, 255, 255, 0) 100%
-		);
-	}
-</style>
