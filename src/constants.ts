@@ -7,6 +7,8 @@ export const images = [
 	{ name: "img6", src: "img6.webp" },
 ];
 
+export const LOGO = "logo.svg"
+
 export const LUMNA_PICTURE = "person.webp";
 export const SEPARATOR = "separator.svg";
 export const DESCRIPTION = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia
