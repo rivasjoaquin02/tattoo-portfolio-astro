@@ -1,9 +1,5 @@
-import { images } from "../constants";
+import { IMAGES, type Images } from "../constants";
 
-type Img = {
-	name: string;
-	src: string;
-};
-export const getImages = async (): Promise<Img[]> => {
-	return images as Img[];
+export const getImages = async (): Promise<Images> => {
+	return IMAGES as Images;
 };

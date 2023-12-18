@@ -1,19 +1,22 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
 	name: string;
 	desc: string;
-	img: string;
+	img: ImageMetadata;
 }
 
 const { name, desc, img } = Astro.props;
 ---
 
 <div
-	class="flex flex-col z-10 border-white/10 border-[1px] rounded-xl p-4 max-w-sm backdrop-blur-xl"
+	class="scale-on-scroll flex flex-col cursor-pointer z-10 border-white/10 border-[1px] rounded-xl p-4 max-w-sm backdrop-blur-xl"
 >
-	<img
+	<Image
 		class="rounded-full mx-auto border-2 border-lumna-950"
-		width="100"
+		width={80}
+		height={80}
 		src={img}
 		alt={name}
 	/>

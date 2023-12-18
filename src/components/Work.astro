@@ -1,9 +1,36 @@
 ---
-import Gallery from "./Gallery.astro";
+import { Image } from "astro:assets";
+import { getImages } from "../lib/getImages";
 import SectionTitle from "./SectionTitle.astro";
+import { Gallery } from "./Gallery";
+
+const data = await getImages();
 ---
 
 <section class="px-10 mb-36 max-w-screen-lg mx-auto">
 	<SectionTitle>Trabajos Anteriores</SectionTitle>
-	<Gallery />
+	<div class="flex flex-col">
+		<Gallery client:visible data={data} />
+		
+	</div>
 </section>
+
+<style>
+	div img {
+		animation: reveal linear both;
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+	}
+
+	@keyframes reveal {
+		from {
+			opacity: 0;
+			translate: 0 100px;
+			scale: 0.9;
+		}
+		to {
+			opacity: 1;
+			scale: 1;
+		}
+	}
+</style>

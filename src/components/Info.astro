@@ -1,31 +1,34 @@
 ---
-import { LUMNA_PICTURE, SEPARATOR, DESCRIPTION } from "../constants";
+import { LUMNA_IMG, SEPARATOR_IMG, DESCRIPTION } from "../constants";
 import SectionTitle from "./SectionTitle.astro";
+import { Image } from "astro:assets";
 ---
 
 <section class="flex flex-col md:flex-row mb-36 max-w-screen-xl mx-auto">
 	<div class="flex-1 relative">
-		<div class="absolute z-10 top-0 left-0 right-0 h-36 bg-gradient-to-b from-black to-transparent"></div>
-		<img
-			id="imagen"
+		<div
+			class="absolute z-10 top-0 left-0 right-0 h-36
+			bg-gradient-to-b from-black to-transparent"
+		>
+		</div>
+		<Image
+			alt="Lumna"
 			class="w-full mix-blend-exclusion brightness-50"
-			decoding="async"
-			src={LUMNA_PICTURE}
-			alt="Imagen de Lumna"
+			src={LUMNA_IMG}
 		/>
-		<img
+		<Image
 			alt="separator"
-			decoding="async"
-			src={SEPARATOR}
-			class="absolute rotate-90 -translate-x-64 translate-y-[37%] md:translate-x-2 md:translate-y-0 md:rotate-0 bottom-0 right-0 h-full"
+			src={SEPARATOR_IMG}
+			class="absolute rotate-90 -translate-x-64 translate-y-[37%] md:translate-x-[37%] md:translate-y-0 md:rotate-0 bottom-0 right-0 h-full"
 		/>
 	</div>
 	<div class="flex-1 flex flex-col mt-10 px-4 sm:px-10 text-center">
 		<SectionTitle>
-			Hola soy Lumna <span slot="icon" class="text-4xl">👋</span>
+			Hola soy Lumna
+			<span slot="icon" class="scale-in text-4xl">👋</span>
 		</SectionTitle>
 
-		<p class="text-white/50 text-xl">
+		<p class="scale-on-scroll text-white/50 text-xl">
 			{DESCRIPTION}
 		</p>
 	</div>
