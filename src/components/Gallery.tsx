@@ -38,7 +38,7 @@ export function Gallery({ data }: Props) {
 					</button>
 				</div>
 			)}
-			<ul role="list" class="columns-2 md:columns-3 rounded-3xl">
+			<ul role="list" class="columns-2 md:columns-3 rounded-xl overflow-hidden">
 				{data.map((item, id) => (
 					<img
 						key={id}
