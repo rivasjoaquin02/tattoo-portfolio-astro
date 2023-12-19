@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { getImages } from "../lib/getImages";
 import SectionTitle from "./SectionTitle.astro";
 import { Gallery } from "./Gallery";
@@ -7,11 +6,10 @@ import { Gallery } from "./Gallery";
 const data = await getImages();
 ---
 
-<section class="px-10 mb-36 max-w-screen-lg mx-auto">
+<section class="px-4 md:px-10 max-w-screen-lg mx-auto mb-10 md:mb-36">
 	<SectionTitle>Trabajos Anteriores</SectionTitle>
 	<div class="flex flex-col">
 		<Gallery client:visible data={data} />
-		
 	</div>
 </section>
 

@@ -1,0 +1,30 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+const MAP_MODE = "place";
+const API_KEY = "AIzaSyAR1QfnIl36f5QGpDoUmMqtrFjnISpZ8MU";
+const PARAMS = "q=849VCWC8+R9&center=-33.8569,151.2152&zoom=18";
+---
+
+<section class="px-4 md:px-10 max-w-screen-md mx-auto mb-10 md:mb-36">
+	<SectionTitle>
+		<span
+			data-aos="fade-in-scale"
+			data-aos-duration={1000}
+			data-aos-delay="100"
+			slot="icon"
+			class="text-4xl"
+			>🗺️
+		</span>
+		 Donde Estamos
+	</SectionTitle>
+
+	<iframe
+		class="mx-auto rounded-xl border-2 border-white/30 w-full"
+		height="250"
+		style="border:0"
+		referrerpolicy="no-referrer-when-downgrade"
+		src={`https://www.google.com/maps/embed/v1/${MAP_MODE}?key=${API_KEY}&${PARAMS}`}
+		allowfullscreen
+	>
+	</iframe>
+</section>

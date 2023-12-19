@@ -32,7 +32,7 @@ autem nisi labore culpa quis!`;
 
 export const SERVICES = [
 	{
-		name: "service1",
+		name: "Tattoo",
 		desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
 		img: service1,
 	},

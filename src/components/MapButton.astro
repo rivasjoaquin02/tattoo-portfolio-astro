@@ -6,16 +6,16 @@ import { Icon } from "astro-icon";
 <a
 	class="relative overflow-hidden
 		flex items-center justify-center gap-4
-		border-2 border-lumna-300 text-lumna-300 rounded-full
+		border-2 border-white/20 text-white/80 rounded-full
 		p-2 px-4 md:mx-0
 		transition-all ease-linear duration-500
 		active:scale-90 active:transition-all active:duration-100
 		group"
 	href={`https://api.whatsapp.com/send?phone=${PHONE_NUMBER}`}
-	target="_blank"
+    target="_blank"
 >
 	<Icon
-		name="ri:whatsapp-line"
+		name="simple-icons:googlemaps"
 		width={24}
 		class={`transition-all duration-500 ease-linear`}
 	/>
@@ -23,15 +23,11 @@ import { Icon } from "astro-icon";
 		class="font-bold
 			transition-all duration-500 ease-linear
 			group-hover:translate-x-[200%] group-hover:delay-300"
-		>Whatsapp</span
+		>Ubicacion</span
 	>
 </a>
 
 <style>
-	a {
-		box-shadow: 0px 0px 20px rgba(245, 192, 17, 0.4);
-	}
-
 	a:hover svg {
 		transform: scale(4) translate(50%);
 	}

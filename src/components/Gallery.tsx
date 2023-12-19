@@ -6,6 +6,7 @@ type Props = {
 };
 
 export function Gallery({ data }: Props) {
+	const [imagesToShow, setImagesToShow] = useState<number>(6);
 	const [selectedImg, setSelectedImg] = useState<number>(0);
 	const [modal, setModal] = useState<boolean>(false);
 
@@ -18,19 +19,22 @@ export function Gallery({ data }: Props) {
 		<div class="relative flex flex-col">
 			{modal && (
 				<div
-					class="absolute z-20 top-0 left-0 right-0 
-                    flex flex-col gap-4 "
+					class="absolute z-20 inset-0 
+                    flex flex-col gap-4 backdrop-blur-sm p-10"
 				>
 					<img
 						src={data[selectedImg].src.src}
 						alt={data[selectedImg].name}
+						class="rounded-xl"
 					/>
 					<button
 						type="button"
 						class="flex gap-2 text-lumna-600 font-bold px-4 py-2 rounded-xl
-				hover:scale-105 hover:shadow-lumna-500 transition-all"
+							bg-black/80
+							hover:scale-105 hover:shadow-lumna-500 transition-all mx-auto"
+						onClick={() => setModal(false)}
 					>
-						Show More
+						close
 					</button>
 				</div>
 			)}
@@ -38,7 +42,8 @@ export function Gallery({ data }: Props) {
 				{data.map((item, id) => (
 					<img
 						key={id}
-						class="reveal w-full cursor-pointer mb-4"
+						class="opacity-80 hover:opacity-100 reveal w-full cursor-pointer mb-2
+							transition-opacity"
 						src={item.src.src}
 						alt={item.name}
 						onClick={() => handleClick(id)}
@@ -48,9 +53,8 @@ export function Gallery({ data }: Props) {
 			<div class="mx-auto my-10">
 				<button
 					class="flex gap-2 text-lumna-600 font-bold px-4 py-2 rounded-xl
-				hover:scale-105 hover:shadow-lumna-500 transition-all"
+						hover:scale-105 hover:shadow-lumna-500 transition-all"
 				>
-					{/* <Icon name="mdi:image-plus-outline" /> */}
 					Show More
 				</button>
 			</div>
