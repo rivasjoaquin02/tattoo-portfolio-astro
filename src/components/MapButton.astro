@@ -7,14 +7,14 @@ import { Icon } from "astro-icon";
 	class="relative overflow-hidden
 		flex items-center justify-center gap-4
 		border-2 border-white/20 text-white/80 rounded-full
-		p-2 px-4 md:mx-0
+		py-2 px-4 mx-auto md:ml-0 md:mr-auto
 		transition-all ease-linear duration-500
-		active:scale-90 active:transition-all active:duration-100
-		group"
+		active:scale-90 active:transition-all active:duration-100"
 	href={`https://api.whatsapp.com/send?phone=${PHONE_NUMBER}`}
-    target="_blank"
+	target="_blank"
 >
 	<Icon
+		slot="icon"
 		name="simple-icons:googlemaps"
 		width={24}
 		class={`transition-all duration-500 ease-linear`}
@@ -23,12 +23,13 @@ import { Icon } from "astro-icon";
 		class="font-bold
 			transition-all duration-500 ease-linear
 			group-hover:translate-x-[200%] group-hover:delay-300"
-		>Ubicacion</span
 	>
+		<slot />
+	</span>
 </a>
 
 <style>
-	a:hover svg {
+	a:hover #icon {
 		transform: scale(4) translate(50%);
 	}
 </style>

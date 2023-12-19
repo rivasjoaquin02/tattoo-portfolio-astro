@@ -7,7 +7,7 @@ import { Icon } from "astro-icon";
 	class="relative overflow-hidden
 		flex items-center justify-center gap-4
 		border-2 border-lumna-300 text-lumna-300 rounded-full
-		p-2 px-4 md:mx-0
+		py-2 px-4 mx-auto md:ml-0 md:mr-auto
 		transition-all ease-linear duration-500
 		active:scale-90 active:transition-all active:duration-100
 		group"
@@ -23,8 +23,8 @@ import { Icon } from "astro-icon";
 		class="font-bold
 			transition-all duration-500 ease-linear
 			group-hover:translate-x-[200%] group-hover:delay-300"
-		>Whatsapp</span
-	>
+		><slot />
+	</span>
 </a>
 
 <style>
