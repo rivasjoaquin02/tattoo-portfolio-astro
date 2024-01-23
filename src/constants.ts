@@ -2,7 +2,7 @@ import fire from "./assets/fire.svg";
 import fireBig from "./assets/fire-big.svg";
 
 import logo from "./assets/logo.svg";
-import lumna from "./assets/person.webp";
+import lumna from "./assets/person.jpg";
 import separator from "./assets/separator.svg";
 
 import service1 from "./assets/img2.webp";
