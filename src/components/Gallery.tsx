@@ -6,7 +6,6 @@ type Props = {
 };
 
 export function Gallery({ data }: Props) {
-	const [imagesToShow, setImagesToShow] = useState<number>(6);
 	const [selectedImg, setSelectedImg] = useState<number>(0);
 	const [modal, setModal] = useState<boolean>(false);
 
